@@ -3,9 +3,9 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+# Team Number Format: xx-xxxx
 data = {
-        "17-4007" : {},
-        "17-4008" : {},
+        "<team-number>" : {},
         }
 
 def get_scores(): 
