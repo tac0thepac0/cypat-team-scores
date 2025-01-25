@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+    </head>
+    <body>
+
+
+        {% for team, data in out.items() %}
+            <p><b>{{ team }}:</b>
+            <ul>
+                <li>CSS Score:  {{ data['ccs_score'] }}</li>
+                <li>Play Time:  {{ data['play_time'] }}</li>
+                <li>Score Time: {{ data['score_time'] }}</li>
+                <li>Penalties:  {% if data['code']|length %} {{ data['code'] }} {% else %} none {% endif  %}</li>
+            </ul>
+            </p>
+        {% endfor %}
+
+    </body>
+</html>
