@@ -10,8 +10,12 @@ data = {
         }
 
 def get_scores():
-    for team in data.keys():
-        req = get("https://scoreboard.uscyberpatriot.org/api/team/scores.php", params={'team':team})
+    for team in data:
+        req = get(
+            url="https://scoreboard.uscyberpatriot.org/api/team/scores.php",
+            params={'team':team},
+            timeout=3
+        )
         data[team] = req.json()['data'][0]
 
 def get_team_scores(team):
