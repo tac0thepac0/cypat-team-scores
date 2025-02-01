@@ -26,6 +26,9 @@ def get_team_scores(team):
         return data[team]
     else:
         return {}
+    
+def team_not_found(team):
+    return f"Team {team} not found", 404
 
 @app.route("/")
 def index():
@@ -34,7 +37,10 @@ def index():
 
 @app.route("/<team>")
 def team_scores(team=None):
-    return render_template('team.html', out=get_team_scores(team))
+    if team in data:
+        return render_template('team.html', out=get_team_scores(team))
+    else:
+        return team_not_found(team)
 
 if __name__ == '__main__':
     app.run()
