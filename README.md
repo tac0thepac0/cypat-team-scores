@@ -15,7 +15,8 @@ git clone https://github.com/tac0thepac0/cypat-team-scores.git
 Then install dependencies using pip:
 
 ```shell
-pip install -r /path/to/requirements.txt
+cd cypat-team-scores
+pip install -r requirements.txt
 ```
 
 Finally, run the webserver:
