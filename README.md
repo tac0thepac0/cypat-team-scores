@@ -6,7 +6,7 @@ Although the [Cyberpatriot Scoreboard](https://scoreboard.uscyberpatriot.org/) h
 
 ## Installing and Running the Score Viewer
 
-First, clone the repository:
+First, open the terminal and clone the repository:
 
 ```shell
 git clone https://github.com/tac0thepac0/cypat-team-scores.git
